@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {Wrench,Zap,GraduationCap, HardHat,Briefcase,Clock,CalendarCheck,} from "lucide-react";
-import "./services.css"; // External CSS
+import "./Services.css"; // External CSS
 
 export default function Services() {
   const services = [
