@@ -1,0 +1,117 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed; /* Fix the navbar at the top of the page */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Make it span the full width of the page */
+    display: flex;
+    align-items: center; /* Vertically align items */
+    background-color:#0F4D8B;
+    padding: 19px 30px;
+    color: white;
+    z-index: 1000; /* Ensure it stays above other elements */
+    
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    margin-right: 900px; /* Adjust spacing between brand and links */
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and text */
+}
+
+/* Logo Styling */
+.navbar-logo {
+    width: 50px; /* Adjust size */
+    height: auto;
+}
+
+
+/* Navbar Links */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adjust the spacing between links */
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Align with brand vertically */
+}
+
+/* Navbar Link Items */
+.navbar-links li {
+    display: inline; /* Ensure links are in a horizontal line */
+}
+
+/* Navbar Link Styling */
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px; /* Padding for better click area */
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px; /* Rounded hover effect */
+}
+
+/* Hover Effect */
+.navbar-links li a:hover {
+    color: #0d96d5;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover background */
+}
+
+/* Content Spacing */
+body > div {
+    margin-top: 70px; /* Push the page content below the navbar */
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .navbar-brand {
+        margin-right: 500px; /* Adjust spacing for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .navbar-brand {
+        margin-right: 0; /* Center brand */
+        margin-bottom: 10px;
+    }
+
+    .navbar-links {
+        flex-direction: column; /* Stack links */
+        gap: 10px;
+    }
+
+    .navbar-links li {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .navbar-links {
+        gap: 5px; /* Reduce link spacing */
+    }
+
+    .navbar-links li a {
+        font-size: 0.9rem; /* Reduce font size */
+    }
+}
