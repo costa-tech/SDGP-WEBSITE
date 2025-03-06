@@ -1,4 +1,4 @@
-# Patas.lk - Service Provider Platform - https://pataslk.live/ [OUR WEBSITE]([https://github.com/costa-tech/SDGP-WEBSITE.git](https://pataslk.live/)
+# Patas.lk - Service Provider Platform -[OUR WEBSITE](https://pataslk.live/)
 
 ![Patas.lk Logo](public/logo.png)
 
@@ -121,7 +121,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Patas.lk Team - info@pataslk.live
 
-Project Link: [[https://github.com/yourusername/patas.lk](https://github.com/yourusername/patas.lk](https://github.com/costa-tech/SDGP-WEBSITE.git)]([https://github.com/yourusername/patas.lk](https://github.com/costa-tech/SDGP-WEBSITE.git))
+Project Link: [https://github.com/yourusername/patas.lk](https://github.com/yourusername/patas.lk](https://github.com/costa-tech/SDGP-WEBSITE.git)](https://github.com/costa-tech/SDGP-WEBSITE.git)
 
 ---
 
