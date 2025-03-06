@@ -7,6 +7,7 @@ import Home from './assets/Home/Home';
 import Nav_Bar from './assets/Nav_Bar/Nav_Bar';
 import Services from "./assets/Services/Services";
 import SplashScreen from "./assets/SplashScreen/SplashScreen";
+import './assets/global-fixes.css';
 
 const App = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -24,7 +25,7 @@ const App = () => {
   return (
     <>
       {showSplash ? (
-        <SplashScreen onFinish={() => setShowSplash(false)} className={fadeOut ? "fade-out" : ""} />
+        <SplashScreen className={fadeOut ? "fade-out" : ""} />
       ) : (
         <Router>
           <Nav_Bar />

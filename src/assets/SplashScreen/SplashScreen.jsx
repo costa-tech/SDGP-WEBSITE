@@ -1,48 +1,47 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import "./SplashScreen.css";
+import React, { useEffect, useState } from 'react';
+import './SplashScreen.css';
 
-export default function SplashScreen({ onFinish }) {
-  const [isLoading, setIsLoading] = useState(true);
-
+const SplashScreen = ({ onFinish, className }) => {
+  const [logoLoaded, setLogoLoaded] = useState(false);
+  const [textVisible, setTextVisible] = useState(false);
+  
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      onFinish(); // Notify parent when splash ends
-    }, 3000); // 3-second delay
-
-    return () => clearTimeout(timer);
-  }, [onFinish]);
+    // Show logo with animation
+    setTimeout(() => setLogoLoaded(true), 300);
+    
+    // Show text with animation after logo appears
+    setTimeout(() => setTextVisible(true), 800);
+  }, []);
 
   return (
-    <AnimatePresence>
-      {isLoading && (
-        <motion.div
-          className="splash-screen"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <div className="splash-content">
-            <motion.img
-              src="logo1.png" 
-              alt="Logo"
-              className="splash-logo"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 1 }}
-            />
-            <motion.h1
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
-            >
-              Welcome to Patas.lk
-            </motion.h1>
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div className={`splash-screen ${className}`}>
+      <div className="splash-content">
+        <div className={`splash-logo ${logoLoaded ? 'loaded' : ''}`}>
+          <img src="/logo.png" alt="Patas.lk Logo" />
+        </div>
+        
+        <div className={`splash-text ${textVisible ? 'visible' : ''}`}>
+          <h1 className="splash-title">
+            <span className="splash-letter">P</span>
+            <span className="splash-letter">a</span>
+            <span className="splash-letter">t</span>
+            <span className="splash-letter">a</span>
+            <span className="splash-letter">s</span>
+            <span className="splash-letter">.</span>
+            <span className="splash-letter">l</span>
+            <span className="splash-letter">k</span>
+          </h1>
+          <p className="splash-slogan">Your Trusted Service Provider</p>
+        </div>
+        
+        <div className="splash-loading-bar">
+          <div className="splash-progress"></div>
+        </div>
+      </div>
+      
+      <div className="splash-backdrop"></div>
+    </div>
   );
-}
+};
+
+export default SplashScreen;

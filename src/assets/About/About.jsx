@@ -31,9 +31,11 @@ export default function About() {
       <section className="story-section">
         <div className="story-container">
           <h2 className="section-title-1">Our Journey</h2>
-          <p className="section-description">
-            Established with a vision to simplify service bookings, Patas.lk bridges the gap between skilled experts and customers seeking reliable services. We offer a diverse range of professionals, from home repairs to beauty services.
-          </p>
+          <div className="vision-box">
+            <p>
+              Established with a vision to simplify service bookings, Patas.lk bridges the gap between skilled experts and customers seeking reliable services. We offer a diverse range of professionals, from home repairs to beauty services.
+            </p>
+          </div>
         </div>
       </section>
 

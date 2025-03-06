@@ -15,7 +15,25 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <h1 className="home-title">Welcome to <span className="bold-text">Patas.lk </span>– Your Trusted Service Provider Platform!</h1>  
+      <div className="welcome-container">
+        <div className="welcome-heading">
+          <span>Welcome</span>{' '}
+          <span>to</span>{' '}
+          <span>Patas.lk</span>{' '}
+          <span>–</span>{' '}
+          <span>Your</span>{' '}
+          <span>Trusted</span>{' '}
+          <span>Service</span>{' '}
+          <span>Provider</span>{' '}
+          <span>Platform</span>
+        </div>
+        <div className="animated-shapes">
+          <div className="shape shape1"></div>
+          <div className="shape shape2"></div>
+          <div className="shape shape3"></div>
+          <div className="shape shape4"></div>
+        </div>
+      </div>
       {/* Hero Section */}
     <section className="home-section">
     <video autoPlay loop muted className="home-video">

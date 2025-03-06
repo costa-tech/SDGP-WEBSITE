@@ -5,10 +5,26 @@ import "./Services.css"; // External CSS
 
 export default function Services() {
   const services = [
-    { icon: Wrench, name: "Plumbing", description: "Expert plumbing services on demand" },
-    { icon: Zap, name: "Electrical", description: "Professional electrical work and repairs" },
-    { icon: GraduationCap, name: "Tutoring", description: "Qualified tutors for all subjects" },
-    { icon: HardHat, name: "Construction", description: "Skilled masons and construction experts" },
+    {
+      icon: Wrench,
+      name: "Plumbing",
+      description: "Expert plumbing services on demand"
+    },
+    {
+      icon: Zap,
+      name: "Electrical",
+      description: "Professional electrical work and repairs"
+    },
+    {
+      icon: GraduationCap,
+      name: "Tutoring",
+      description: "Qualified tutors for all subjects"
+    },
+    {
+      icon: HardHat,
+      name: "Construction",
+      description: "Skilled masons and construction experts"
+    }
   ];
 
   return (
@@ -22,11 +38,11 @@ export default function Services() {
           className="s-content"
         >
           <h1>Our Services</h1>
-          <p>Find the best service for your needs</p>
+          <p>Professional Services at Your Fingertips</p>
         </motion.div>
       </section>
 
-      {/* Services Grid */}
+      {/* Fixed Services Grid */}
       <section className="services-grid">
         {services.map((service, index) => (
           <motion.div
@@ -34,6 +50,7 @@ export default function Services() {
             className="service-card"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <service.icon className="service-icon" />

@@ -27,7 +27,7 @@ export default function Footer() {
         {/* Contact Info */}
         <div className="footer-section">
           <h3 className="footer-title">Contact Info</h3>
-          <p><Mail size={16} /> pataslk@info.com</p>
+          <p><Mail size={16} /> info@pataslk.live</p>
           <p><Phone size={16} /> +94 763 001 274</p>
           <p><MapPin size={16} /> 435 Galle Rd, Colombo 00300</p>
         </div>

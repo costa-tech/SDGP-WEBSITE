@@ -35,22 +35,52 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="contact-form"
           >
-            <h2>Send us a message</h2>
-            <form onSubmit={handleSubmit}>
-              <label htmlFor="name">Full Name</label>
-              <input type="text" id="name" required />
-
-              <label htmlFor="email">Email Address</label>
-              <input type="email" id="email" required />
-
-              <label htmlFor="subject">Subject</label>
-              <input type="text" id="subject" required />
-
-              <label htmlFor="message">Message</label>
-              <textarea id="message" rows="5" required></textarea>
-
-              <button type="submit" className="submit-button">
-                <Send size={20} /> Send Message
+            <h2>Send Us a Message</h2>
+            <form onSubmit={handleSubmit}>              
+              <div className="form-group">
+                <label htmlFor="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="service">Service Type</label>
+                <select id="service" required>
+                  <option value="">Select a service type</option>
+                  <option value="plumbing">Plumbing</option>
+                  <option value="electrical">Electrical</option>
+                  <option value="cleaning">Cleaning</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="message">Your Message</label>
+                <textarea
+                  id="message"
+                  placeholder="Tell us what you need"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              
+              <button className="submit-button">
+                <span>Send Message</span>
+                <Mail size={20} />
               </button>
             </form>
           </motion.div>
@@ -68,7 +98,7 @@ export default function Contact() {
               <Mail className="info-icon" />
               <div>
                 <strong>Email</strong>
-                <p>pataslk@info.com</p>
+                <p>info@pataslk.live</p>
               </div>
             </div>
 
