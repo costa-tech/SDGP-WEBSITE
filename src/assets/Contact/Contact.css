@@ -416,3 +416,134 @@ html, body {
     min-width: 100%;
   }
 }
+
+/* Improve responsiveness for Contact page */
+/* Fix Contact Grid Overflow */
+.contact-container {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* Optimized Contact Grid */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Enhanced Responsive Styles */
+@media (max-width: 1024px) {
+  .contact-grid {
+    max-width: 90%;
+    gap: 30px;
+  }
+  
+  .contact-form,
+  .contact-details {
+    flex-basis: calc(50% - 15px);
+    min-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  
+  .contact-title {
+    font-size: 2.2rem;
+  }
+  
+  .contact-description {
+    font-size: 1rem;
+  }
+  
+  .contact-grid {
+    flex-direction: column;
+    width: 100%;
+    max-width: 95%;
+    gap: 30px;
+  }
+  
+  .contact-form,
+  .contact-details {
+    width: 100%;
+    flex-basis: 100%;
+    min-width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form h2,
+  .contact-details h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-map iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 2rem 0.5rem;
+  }
+  
+  .contact-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-form,
+  .contact-details {
+    padding: 15px;
+  }
+  
+  .contact-form h2,
+  .contact-details h2 {
+    font-size: 1.5rem;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .contact-map iframe {
+    height: 180px;
+  }
+  
+  .contact-info {
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .info-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
