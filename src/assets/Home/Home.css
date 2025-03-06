@@ -85,35 +85,42 @@
 .home-section {
   position: relative;
   width: 100%;
-  height: 75vh;
+  height: 100vh; 
   overflow: hidden;
+  padding: 3rem 0 1rem; /* Reduced bottom padding */
+  margin-bottom: 0; /* Removed bottom margin completely */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .home-video {
-  position: absolute;
-  top: 0;
-  left: 10%;
-  width: 50%;
-  height: 100%;
+  width: 45%; /* Reduced from 50% to 45% */
+  height: 75%;
   object-fit: cover;
   opacity: 0.8;
   border-radius: 8%;
+  margin-left: 5%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .home-content {
-  position: absolute;
-  top: 50%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  width: 38%; /* Reduced from 40% to 38% */
+  margin-right: 5%;
   text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 2.5rem;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 350px;
+  height: auto;
+  max-height: 75vh; /* Added max height */
+  overflow-y: auto; /* Allow scrolling if content is too long */
 }
 
 .home-title {
@@ -129,45 +136,80 @@
 .home-title-1 {
   font-size: 2.5rem;
   font-family: "Roboto", serif;
-  font-weight: bold;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
   color: #0a0a0a;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(97, 198, 244, 0.5);
 }
 
 .bold-text {
   text-align: end;
-  font-weight: 700;
+  font-weight: 900;
   color: #0454e9;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 .home-description {
-  text-align: right;
-  font-size: 1.2rem;
-  margin: 15px 0;
-  color: #222;
-  line-height: 1.8;
+  color: #333333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  border: 1px solid rgba(97, 198, 244, 0.3);
+  max-height: none; /* Remove any height restriction */
+}
+
+.get-started-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .get-started-btn {
-  background-color: #09209f;
-  color: #fff;
-  font-size: 18px;
-  padding: 12px 24px;
+  background: linear-gradient(45deg, #09209f, #0470dd);
+  color: #ffffff;
+  font-size: 20px;
+  padding: 15px 32px;
   border: none;
-  border-radius: 8px;
+  border-radius: 30px;
   cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(9, 32, 159, 0.4);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .get-started-btn:hover {
-  background-color: #0056b3;
+  background: linear-gradient(45deg, #0470dd, #09209f);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(9, 32, 159, 0.5);
+}
+
+.get-started-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 15px rgba(9, 32, 159, 0.4);
 }
 
 /* Services Section */
 .services-section {
-  padding: 3rem 8.5rem;
+  padding: 3rem 8.5rem 1.5rem; /* Reduced bottom padding from default to 1.5rem */
 }
 
 .services-container {
@@ -214,7 +256,8 @@
 
 /* Featured Work Section */
 .work-section {
-  padding: 5rem 0;
+  padding: 2rem 0; /* Reduced top padding from 5rem to 2rem */
+  margin-top: -1rem; /* Added negative margin to pull it up */
 }
 
 .work-container {
@@ -284,9 +327,10 @@
 /* Who We Are Section */
 .who-we-are {
   background: linear-gradient(to right, #61c6f4, #ffffff);
-  padding: 5rem 2rem;
+  padding: 2rem 2rem 3rem; /* Reduced top padding further */
   text-align: center;
   color: #fff;
+  margin-top: -2rem; /* Increased negative margin to pull it up more */
 }
 
 .who-we-are-container {
@@ -521,6 +565,11 @@
   .home-content {
     padding: 2rem;
   }
+  .home-description {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 1rem 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -540,110 +589,152 @@
   }
 }
 
-/* Responsive Design */
+/* Responsive Design - Clean up and fix */
 /* Medium screens (Tablets & Small Laptops) */
 @media (max-width: 1024px) {
   .home-title {
     font-size: 2rem;
   }
+  
+  .home-section {
+    height: auto;
+    min-height: 100vh; 
+    flex-direction: column;
+    padding: 4rem 0 0; /* Remove bottom padding */
+    gap: 2rem; /* Reduced gap */
+    margin-bottom: 0;
+  }
+  
   .home-video {
-    height: 100vh;
-    left: 5%;
-    width: 55%;
+    width: 80%;
+    height: 45vh; 
+    margin: 0 auto;
   }
-  .services-section {
-    padding: 5rem 3rem;
-  }
+  
   .home-content {
-    left: 70%;
+    width: 80%;
+    margin: 0 auto 2rem; 
+    max-height: none; 
   }
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  
   .welcome-heading {
     font-size: 3rem;
+  }
+  
+  .services-section {
+    padding: 5rem 3rem 1rem; /* Reduced bottom padding */
+  }
+  
+  .work-section {
+    padding: 1.5rem 0; /* Reduced padding */
+  }
+
+  .who-we-are {
+    padding: 1rem 2rem 3rem; /* Further reduced top padding */
+    margin-top: -1rem;
   }
 }
 
 /* Small screens (Phones) */
 @media (max-width: 768px) {
-  .home-title {
-    font-size: 1.5rem;
-  }
-  .home-video {
-    height: 100vh;
-  }
-  .services-section {
-    padding: 4rem 2rem;
-  }
   .welcome-heading {
     font-size: 2.5rem;
     padding: 0.5rem;
   }
+  
   .home-section {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 0;
+    padding: 2rem 0 0;
+    min-height: auto;
+    gap: 1.5rem;
   }
+  
   .home-video {
-    position: relative;
-    left: 0;
     width: 90%;
-    margin: 0 auto;
-    max-height: 50vh;
+    height: 35vh; 
   }
+  
   .home-content {
-    position: relative;
-    left: 0;
-    transform: none;
-    padding: 2rem;
     width: 90%;
-    margin: 0 auto;
+    padding: 1.8rem;
   }
+  
+  .home-title-1 {
+    font-size: 2rem;
+  }
+  
   .home-description {
-    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
   }
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+  
+  .services-section {
+    padding: 4rem 2rem 1rem; /* Reduced bottom padding */
   }
+  
+  .work-section {
+    padding: 1rem 0; /* Reduced padding */
+  }
+
   .work-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+
+  .who-we-are {
+    margin-top: 0; /* Reset margin on mobile for better layout */
+    padding-top: 0.5rem;
   }
 }
 
 /* Extra small screens (Mobile Phones) */
 @media (max-width: 480px) {
-  .home-title {
-    font-size: 1.2rem;
-  }
-  .home-video {
-    height: 100vh;
-  }
-  .services-section {
-    padding: 3rem 1.5rem;
-  }
   .welcome-heading {
     font-size: 2rem;
   }
+  
+  .home-section {
+    padding: 2rem 0;
+    gap: 1.5rem;
+  }
+  
+  .home-video {
+    height: 30vh; 
+  }
+  
+  .home-content {
+    padding: 1rem;
+  }
+  
+  .home-title-1 {
+    font-size: 1.5rem;
+    padding: 8px 15px;
+  }
+  
+  .services-section {
+    padding: 3rem 1.5rem 0.5rem; /* Further reduced bottom padding */
+  }
+  
   .services-grid {
     grid-template-columns: 1fr;
   }
+  
   .work-grid {
     grid-template-columns: 1fr;
   }
-  .home-title-1 {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  
+  .get-started-btn {
+    font-size: 16px;
+    padding: 12px 26px;
   }
+  
   .who-title {
     font-size: 2rem;
   }
+  
   .who-description {
     font-size: 1rem;
   }
+  
   .who-image {
     width: 120px;
     height: 280px;

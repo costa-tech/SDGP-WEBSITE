@@ -52,11 +52,13 @@ export default function Home() {
         <p className="home-description">Patas.lk – Your trusted platform to connect with skilled professionals effortlessly. 
           Whether you need a home repair expert, freelance designer, or personal trainer, we make hiring simple, secure, 
           and hassle-free. Enjoy verified professionals, transparent pricing, and seamless communication experience convenience at your fingertips!</p>
+        <div className="get-started-btn-container">
         <button className="get-started-btn">Get Started</button>
-        
+      </div>
     
     </motion.div>
   </div>
+  
 </section>
 <section className="who-we-are">
       <div className="who-we-are-container">
