@@ -1,5 +1,4 @@
-# Patas.lk - Service Provider Platform - [OUR WEBSITE](https://pataslk.live/)
-
+# [Patas.lk](https://pataslk.live/) - Service Provider Platform 
 ![Patas.lk Logo](public/logo.png)
 
 
