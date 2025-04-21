@@ -53,8 +53,10 @@ export default function Home() {
           Whether you need a home repair expert, freelance designer, or personal trainer, we make hiring simple, secure, 
           and hassle-free. Enjoy verified professionals, transparent pricing, and seamless communication experience convenience at your fingertips!</p>
         <div className="get-started-btn-container">
-        <button className="get-started-btn">Get Started</button>
-      </div>
+          <a href="https://gofile.io/d/mpDfYL" target="_blank" rel="noopener noreferrer" className="get-started-btn">
+            Download App
+          </a>
+        </div>
     
     </motion.div>
   </div>
